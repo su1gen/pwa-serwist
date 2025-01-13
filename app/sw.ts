@@ -35,28 +35,28 @@ const serwist = new Serwist({
 });
 
 
-self.addEventListener("fetch", (event) => {
-  const url = new URL(event.request.url);
-  // For "/legacy-post" with the method "POST", this simply makes a network request,
-  // but if that fails due to a network problem, the request is added to the background
-  // synchronization queue and will be retried later.
-  if (event.request.method === "POST" && url.origin === location.origin && url.pathname === "/share-target") {
-    // const backgroundSync = async () => {
-    //   try {
-    //     const response = await fetch(event.request.clone());
-    //     return response;
-    //   } catch (error) {
-    //     await queue.pushRequest({ request: event.request });
-    //     return Response.error();
-    //   }
-    // };
-    // event.respondWith(backgroundSync());
-
-
-    // return Response.redirect('/image', 303);
-
-  }
-});
+// self.addEventListener("fetch", (event) => {
+//   const url = new URL(event.request.url);
+//   // For "/legacy-post" with the method "POST", this simply makes a network request,
+//   // but if that fails due to a network problem, the request is added to the background
+//   // synchronization queue and will be retried later.
+//   if (event.request.method === "POST" && url.origin === location.origin && url.pathname === "/share-target") {
+//     // const backgroundSync = async () => {
+//     //   try {
+//     //     const response = await fetch(event.request.clone());
+//     //     return response;
+//     //   } catch (error) {
+//     //     await queue.pushRequest({ request: event.request });
+//     //     return Response.error();
+//     //   }
+//     // };
+//     // event.respondWith(backgroundSync());
+//
+//
+//     // return Response.redirect('/image', 303);
+//
+//   }
+// });
 
 
 serwist.addEventListeners();
