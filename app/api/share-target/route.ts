@@ -1,7 +1,7 @@
-import { NextResponse } from 'next/server'
+// import { NextResponse } from 'next/server'
 
 export async function POST() {
-  try {
+  // try {
     // Логируем запрос
     // console.log('Request received:', request);
     //
@@ -25,9 +25,9 @@ export async function POST() {
     //   size: file.size,
     //   type: file.type, });
 
-    return NextResponse.redirect('https://pwa-serwist.vercel.app/image');
-  } catch (error) {
-    console.error('Error processing shared file:', error);
-    return NextResponse.redirect('/?error=true');
-  }
+    return Response.redirect('/image');
+  // } catch (error) {
+  //   console.error('Error processing shared file:', error);
+  //   return NextResponse.redirect('/?error=true');
+  // }
 }
