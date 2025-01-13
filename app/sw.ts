@@ -40,7 +40,7 @@ self.addEventListener("fetch", (event) => {
   // For "/legacy-post" with the method "POST", this simply makes a network request,
   // but if that fails due to a network problem, the request is added to the background
   // synchronization queue and will be retried later.
-  if (event.request.method === "POST" && url.origin === location.origin && url.pathname === "/share-target") {
+  if (event.request.method === "POST" && url.origin === location.origin && url.pathname === "/api/share-target") {
     // const backgroundSync = async () => {
     //   try {
     //     const response = await fetch(event.request.clone());
