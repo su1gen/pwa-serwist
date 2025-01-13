@@ -53,7 +53,7 @@ self.addEventListener("fetch", (event) => {
     // event.respondWith(backgroundSync());
 
 
-    return Response.redirect('/image', 303);
+    // return Response.redirect('/image', 303);
 
   }
 });
