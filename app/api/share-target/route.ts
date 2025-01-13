@@ -25,7 +25,7 @@ export async function POST() {
     //   size: file.size,
     //   type: file.type, });
 
-    return Response.redirect('/image');
+    return Response.redirect('https://pwa-serwist.vercel.app/image');
   // } catch (error) {
   //   console.error('Error processing shared file:', error);
   //   return NextResponse.redirect('/?error=true');
