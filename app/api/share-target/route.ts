@@ -20,12 +20,12 @@ export async function POST(request: NextRequest) {
       type: file.type,
     });
 
-    return NextResponse.json({ success: true,
-      name: file.name,
-      size: file.size,
-      type: file.type, });
+    // return NextResponse.json({ success: true,
+    //   name: file.name,
+    //   size: file.size,
+    //   type: file.type, });
 
-    return NextResponse.redirect('https://my-pwa-phi.vercel.app/files');
+    return NextResponse.redirect('/files');
   } catch (error) {
     console.error('Error processing shared file:', error);
     return NextResponse.redirect('/?error=true');
